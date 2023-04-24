@@ -42,4 +42,9 @@ public class HelloWorld {
     * prints ```this is a the backslash symbol: \``` as example
   * ```\n``` is still new line escape character
     * if used in the middle of a string, eg ```"Hello\nGoodbye"``` then Goodbye would be on the next line
-  
+* Compound assignment operators:
+  * Addition - ```+=```
+  * Subtraction - ```-=```
+  * Multiplication - ```*=```
+  * Division - ```/=```
+  * Modulo - ```%=```

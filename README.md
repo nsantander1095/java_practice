@@ -124,4 +124,6 @@ class Employee {
   * ```void``` means that there is no specific output from the method
   * ```checkBalance()``` is the name of the method. It is non-static since the ```static``` keyword is not included
 
-  
+
+### Conditonals
+

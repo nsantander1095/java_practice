@@ -128,7 +128,7 @@ class Employee {
 ### Conditonals
 
 * ```if-then```: code block runs if condition is true
-* ```if-then-else``: one block runs if condition is true, other block rubns if condition is flase
+* ```if-then-else```: one block runs if condition is true, other block rubns if condition is flase
 * ```if-then-else``` chained: same as ```if-then``` but an arbitrary number of conditions
 * ```switch```: switch block runs if condition vlaue matches ```case``` value
 

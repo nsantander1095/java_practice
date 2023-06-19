@@ -132,3 +132,8 @@ class Employee {
 * ```if-then-else``` chained: same as ```if-then``` but an arbitrary number of conditions
 * ```switch```: switch block runs if condition vlaue matches ```case``` value
 
+### Conditional Operators
+
+This section will cover the ```AND```, ```OR```, and ```NOT``` conditional operators and how they are used. Here is the triuth table for reference:
+
+![Truth table](./src/img/truth-table.png)

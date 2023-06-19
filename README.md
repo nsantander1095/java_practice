@@ -26,7 +26,7 @@ public class HelloWorld {
   }
 }
 ```
-### Variables
+## Variables
 
 * Eight primitive data types: int, double, boolean, char (surrounded by single quotes), byte, long, short, float. Also null, but we know about that.
 * ___Literal___ - when code is used to to represent a fixed value.
@@ -49,7 +49,7 @@ public class HelloWorld {
   * Division - ```/=```
   * Modulo - ```%=```
 
-### OOP
+## OOP
 
 * Class - the set of instructions that describe how an instance can behave and what information it contains. ```public``` is access level modifier that allows other classes to interact with this class. FOr now this is always the case.
 ```
@@ -125,15 +125,16 @@ class Employee {
   * ```checkBalance()``` is the name of the method. It is non-static since the ```static``` keyword is not included
 
 
-### Conditonals
+## Conditonals
 
 * ```if-then```: code block runs if condition is true
 * ```if-then-else```: one block runs if condition is true, other block rubns if condition is flase
 * ```if-then-else``` chained: same as ```if-then``` but an arbitrary number of conditions
 * ```switch```: switch block runs if condition vlaue matches ```case``` value
 
-### Conditional Operators
+## Conditional Operators
 
 This section will cover the ```AND```, ```OR```, and ```NOT``` conditional operators and how they are used. Here is the triuth table for reference:
 
 ![Truth table](./src/img/truth-table.png)
+

@@ -14,9 +14,10 @@ A place to staret learning Java basics
 * ```/* (comment) */``` for multi-line comment
 * ```/**  */``` for Javadoc comments. Used to create documentation for APIs. Commonly written before the declaration of fields, methods, and classes
 * ___Java is a class based language.___ Classes have a ```main``` method. Class names much match file names. File and class names are ___Pascal cased.___ Methods are ___camel cased.___
-* ___Java is a compiled mprogramming language and is case sensitive.___
+* ___Java is a compiled programming language and is case sensitive.___
 * ```javac``` terminal command to compile ```.java``` file, include file extension. Produces a ```.class``` file if successful.
-* ```java``` to run executable ```.class``` file, do not include file extension when running.
+* ```java``` to run executable ```.class``` file, do not include file extension when running. Ex:
+![Compile example](./src/img/compile-example.png)
 
 ### Code Example: HelloWorld
 ```
@@ -138,3 +139,130 @@ This section will cover the ```AND```, ```OR```, and ```NOT``` conditional opera
 
 ![Truth table](./src/img/truth-table.png)
 
+### Conditional - And: &&
+
+Used between two boolean values and evaluates to a single boolean value. Ex:
+```
+if (tutionPaid) {
+  if (hasPrerequisite) {
+    // enroll student
+  }
+}
+```
+this can be changed to:
+```
+if(tuitionPaid && hasPrerequisite) {
+  // enroll student
+}
+```
+Here we changed the nested if statements into one using the and operator. Here is every combination written in code:
+```
+true && true
+//true
+false && true
+//false
+true && false
+//false
+false && false
+//false
+```
+### Conditional - Or: ||
+
+Used between two boolean values and evaluates to a single boolean value. Ex:
+```
+if(hasAlgebraPrerequisite) {
+  //Enroll in course
+}
+
+if(hasGeometryPrerequisite) {
+  // Enroll in course
+}
+```
+this can be changed to:
+```
+if(hasAlgebraPrerequisite || hasGeometryPrerequisite) {
+  // Enroll in course
+}
+```
+Here we changed the two if statements to one and as long as one of the boolean values equate true then the student will be enrolled in the course. Here is every combination written in code:
+```
+true || true
+// true
+false || true
+//true
+true || false
+//true
+false || false
+//false
+```
+### Logical Not: !
+
+The unary operator NOT, ```!```, works on a single value and evaluates to the opposite boolean to which it's applied. NOT is useful for expressing our intent clearly in programs. For example, sometimes we need the opposite behavior of an ```if-then```: run a code block only if the condition is ```false```. Ex:
+```
+boolean hasPrerequisite = false;
+
+if(hasPrerequisite) {
+  //do nothing
+} else {
+  System.out.println("Must complete prerequisite course!");
+}
+```
+This code does what we want but we are using the beginning of the ```if-else``` to do nothing which is a waste of time. We can change it to this:
+```
+boolean hasPrerequisite = false;
+
+if(!hasPrerequisite) {
+  System.out.println("Must complete prerequisite course!");
+}
+```
+### Combining Conditional Operators
+
+We have the ability to expand our boolean expressions by using multiple conditional operators in a single expression. For example:
+```
+boolean foo = true && !(false || !true)
+```
+The order of evaluation here would be as follows:
+1. Conditions placed in paranthesis - ```()```
+2. NOT - ```!```
+3. AND - ```&&```
+4. OR - ```||```
+
+So let's break down the example from above.
+
+First we evaluate ```(false || !true)``` because it is enclosed in paranthesis. Following the order of evaluation, we will evaluate ```!true```, which equals ```false```:
+```
+true && !(false || false)
+```
+Next we evaluate ```(false || false)``` which equals ```false```. Now we have:
+```
+true && !false
+```
+Next we evaluate ```!false``` because it uses the NOT operator. This expression equals ```true``` making our expression:
+```
+true && true
+```
+which equates simply to ```true```; therefore, the value of ```foo``` is ```true```.
+
+### Review
+* Conditional-AND, ```&&```, evaluates to ```true``` if the booleans on both sides are ```true```.
+  ```
+  if (true && false) {
+    System.out.println("You won't see me print!");
+  } else if (true && true) {
+    System.out.println("You will see me print!");
+  }
+  ```
+* Conditional-OR, ```||``` evaluates to ```true ``` if one or both of the booleans on either side is ```true```.
+  ```
+  if (false || false) {
+    System.out.println("You won't see me print!");
+  } else if (false || true) {
+    System.out.println("You will see me print!");
+  }
+  ```
+* Logical-NOT, ```!```, evaluates to the opposite boolean value to which it is applied.
+  ```
+  if (!false) {
+    System.out.println("You will see me print!");
+  }
+  ```
